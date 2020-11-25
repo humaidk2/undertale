@@ -1,30 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Undertale Audio Visualizer
 
-## Getting Started
+**_ This project is live _**
 
-First, run the development server:
+Project Link : [https://undertale.humaidkhan.com](https://undertale.humaidkhan.com)
 
-```bash
+![image of audio visualizer running](./wallpaper.png)
+
+Description:
+
+This is a circular audio visualizer, built using HTML5 Canvas.
+
+If you want to learn how I built it, I'll be doing a tutorial on my [blog](https://thecybermonkeys.com).
+
+Note: I don't own the wallpaper or the music
+
+The music is from [soundcloud](https://soundcloud.com/)
+From [cementcity-1](https://soundcloud.com/cementcity-1/undertale-cement-city-remix)
+
+The wallpaper is from [imgur](https://imgur.com/YP0IlgN)
+
+The rain music is completely mine.
+
+# Tech Stack
+
+- Next
+- React
+- Canvas
+- fontawesome
+
+To run the app,
+
+git clone https://github.com/humaidk2/undertale.git
+
+cd undertale
+
+npm install
+
 npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
