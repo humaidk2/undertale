@@ -1,17 +1,25 @@
-let url = `https://api.soundcloud.com/resolve.json?url=${encodeURI(
-  "https://soundcloud.com/cementcity-1/undertale-cement-city-remix"
-)}&client_id=${"67129366c767d009ecc75cec10fa3d0f"}`;
+// let url = `https://api.soundcloud.com/resolve.json?url=${encodeURI(
+//   "https://soundcloud.com/cementcity-1/undertale-cement-city-remix"
+// )}&client_id=${"6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj56"}`;
+
+let trackId = '272083179'
+let clientId = '6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj56'
+// let url = `https://young-fjord-13133.herokuapp.com/https://api-v2.soundcloud.com/tracks/${trackId}?client_id=${clientId}`;
 
 var audioElement = document.getElementById("audioElement");
-audioElement.crossOrigin = "anonymous";
+// audioElement.crossOrigin = "anonymous";
 audioElement.volume = 1;
 async function getTrack(url) {
-  let res = await fetch(url);
-  let data = await res.json();
+  // let res = await fetch(url);
+  // let data = await res.json();
 
-  audioElement.src = await `${
-    data.stream_url
-  }?client_id=${"67129366c767d009ecc75cec10fa3d0f"}`;
+  // audioElement.src = await `${
+  //   data.stream_url
+  // }?client_id=${"6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj56"}`;
+  // let media = await fetch(`https://young-fjord-13133.herokuapp.com/${data.media.transcodings[1].url}?client_id=${clientId}`)
+
+  // let mediaData = await media.json()
+  // audioElement.src = url
   await audioElement.play();
   await rain.play();
 }
@@ -41,7 +49,7 @@ analyser.connect(audioCtx.destination);
 // same size as fftSize divided 2
 var data = new Uint8Array(analyser.frequencyBinCount - 382);
 
-// loops 60 frames per second
+// loops 60 frames peUndertale (Cement City Remix).mp3r second
 requestAnimationFrame(loopingFunction);
 
 function loopingFunction() {
@@ -53,8 +61,8 @@ function loopingFunction() {
 
   analyser.smoothingTimeConstant = 0.85;
   // draw based on data
-  // draw(data);
-  drawCircle(data);
+  draw(data);
+  // drawCircle(data);
 }
 var startX = canvas.width / 2,
   startY = canvas.height / 2;
@@ -183,7 +191,7 @@ function drawCircle(data) {
 }
 var rain = document.getElementById("rain");
 rain.volume = 0.4;
-rain.loop = true;
+// rain.loop = true;
 audioElement.onplay = () => {
   audioCtx.resume();
 };
@@ -210,6 +218,6 @@ playButton.onclick = () => {
     playButton.children[0].classList.remove("fa-play");
     playButton.children[0].classList.add("fa-pause");
     state = "play";
-    getTrack(url);
+    getTrack();
   }
 };

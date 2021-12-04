@@ -162,7 +162,7 @@ export default function Home() {
       <button id="play-btn">
         <i className="fas fa-play"></i>
       </button>
-      <audio id="audioElement"></audio>
+      <audio id="audioElement" src="music.mp3"></audio>
       <audio id="rain" src="rain2.mp3"></audio>
       <script src="script.js"></script>
     </div>
